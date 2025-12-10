@@ -6,9 +6,8 @@ const API = "http://localhost/educonnect-backend/";
 let userEmail = localStorage.getItem("userEmail");
 
 
-// =============================================
 // 1. LOGIN
-// =============================================
+
 async function loginUser(event) {
     event.preventDefault();
 
@@ -35,9 +34,8 @@ async function loginUser(event) {
 }
 
 
-// =============================================
 // 2. REGISTRATION
-// =============================================
+
 async function registerUser(event) {
     event.preventDefault();
 
@@ -77,11 +75,11 @@ async function registerUser(event) {
         alert("Network error occurred.");
     }
 }
-// =============================================
-// 3. PROFILE MODULE (FETCH AND UPDATE)
-// =============================================
 
-// --- A. FETCH PROFILE DATA (Runs on page load) ---
+// 3. PROFILE MODULE (FETCH AND UPDATE)
+
+
+// --- A. FETCH PROFILE DATA 
 function loadProfile() {
     // Check if the API constant is defined
     if (typeof API === 'undefined') {
@@ -130,7 +128,7 @@ function loadProfile() {
 }
 
 
-// --- B. UPDATE PROFILE DATA (Runs on form submission) ---
+// --- B. UPDATE PROFILE DATA (Runs on form submission) 
 async function updateProfile(event) {
     event.preventDefault(); // Stop the default form submission
     
@@ -169,7 +167,6 @@ async function updateProfile(event) {
         alert('An error occurred during profile update.');
     }
 }
-// ... rest of your script.js code (like fetchProfileData) ...// script.js (INSIDE document.addEventListener('DOMContentLoaded', ...))
 
 // --- 4. PROFILE PAGE LOGIC (EDIT MODE AND LISTENERS) ---
 if (path.includes('profile.html')) {
@@ -234,9 +231,9 @@ if (path.includes('profile.html')) {
 
 
     
-// =============================================
-// 4. FETCH ATTENDANCE (CORRECTED PATH)
-// =============================================
+
+// 5. FETCH ATTENDANCE
+
 function fetchAttendanceData() {
     // Check if user is logged in before fetching
     if (!userEmail) {
@@ -276,9 +273,9 @@ function fetchAttendanceData() {
 }
 
 
-// =============================================
-// 5. FETCH MARKS (COMPLETE IMPLEMENTATION)
-// =============================================
+
+// 6. FETCH MARKS (COMPLETE IMPLEMENTATION)
+
 function loadMarks() {
     // Check if user is logged in before fetching (uses the userEmail variable you defined elsewhere)
     if (!userEmail) {
@@ -329,9 +326,7 @@ function loadMarks() {
         });
 }
 
-// =============================================
-// 6. FETCH NOTICES
-// =============================================
+//6.FETCH NOTICES
 function loadNotices() {
     // Check if user is logged in before fetching
     if (!userEmail) return;
@@ -373,7 +368,7 @@ function loadNotices() {
         });
 }
 
-// NOTE: You must also update the Global Page Load Initiator at the bottom of script.js
+
 
 //contact page
 async function sendMessage(event) {
@@ -413,27 +408,23 @@ async function sendMessage(event) {
 }
 
 
-// =============================================
-// 8. AUTO-LOAD REQUIRED DATA ON PAGE OPEN (CRITICAL FIX)
-// =============================================
 
-// The previous code had undefined functions like loadProfile() and loadAttendance().
-// We are fixing this by calling the correctly defined functions (fetchAttendanceData, loadMarks, etc.)
-// directly using DOM element checks.
+// 8. AUTO-LOAD REQUIRED DATA ON PAGE OPEN 
+
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
 
     // --- Profile page ---
-    // Note: You must define a loadProfile() function to fetch existing user data.
-    // If the profile form element exists, attempt to load profile data.
+   
     if (document.body.contains(document.querySelector("#p-name"))) {
-        // You need to define this function, it is missing in the provided code!
+      
         // loadProfile(); 
     }
 
     // --- Attendance page ---
-    // If the table body for attendance exists, fetch the data.
-    // The event listener for this was in the wrong place earlier.
+  .
     if (document.body.contains(document.querySelector("#attendance-table-body"))) {
         fetchAttendanceData(); // Calling the correctly named function
     }
@@ -450,12 +441,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-// Removed the redundant, confusing, and incorrect auto-load checks from the end.
-// =============================================
-// =============================================
-// =============================================
+
 // GLOBAL PAGE LOAD INITIATOR (FINAL VERSION)
-// =============================================
+
 document.addEventListener('DOMContentLoaded', function() {
     const path = window.location.pathname;
     
@@ -476,17 +464,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 4. Profile Page Check (NEW)
     if (path.includes('profile.html')) {
-        loadProfile(); // <--- This calls the new function
+        loadProfile(); 
     }
-    // script.js (INSIDE the document.addEventListener('DOMContentLoaded', ...) block)
+    
 
     // --- 1. Event Listeners for Edit/Save Buttons ---
     const editButton = document.getElementById('edit-button'); 
     const saveButton = document.getElementById('save-button');
     const profileForm = document.getElementById('profile-form'); 
     
-    // Check if the Profile elements exist and the function is available
-    // Your toggleEditMode is defined below this, so it should be accessible.
+    
     if (editButton && saveButton && profileForm && typeof toggleEditMode === 'function') {
         
         // Listener for the EDIT button click
@@ -494,7 +481,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault(); 
             // Call the existing function to switch to edit mode
             toggleEditMode(true); 
-            // Better UX: Focus on the first field
+          
             const nameField = document.getElementById('name');
             if (nameField) {
                 nameField.focus();
@@ -506,7 +493,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Stop the default form submission for now
             event.preventDefault(); 
             
-            // This calls your function that sends data to profile_update.php
+          
             if (typeof updateProfile === 'function') {
                 updateProfile(event);
             } else {
@@ -518,8 +505,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Initialize the profile page to read-only mode when it loads
         toggleEditMode(false); 
     }
+   
     
-    // ... your fetchProfileData, updateProfile, and toggleEditMode functions follow here ...
-    
-    // Add checks for other pages (like dashboard or timetable) here later
 });
