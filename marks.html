@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduConnect | Marks</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="sidebar">
+   <h2>EduConnect🎓</h2>
+<ul class="nav-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="dashboard.html"><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
+    <li><a href="profile.html"> <i class="fa-solid fa-user"></i> Profile</a></li>
+     <li><a href="timetable.html"><i class="fa-solid fa-calendar-days"></i>Timetable</a></li>
+    <li><a href="marks.html" class="active"><i class="fa-solid fa-network-wired"></i>Marks</a></li>
+    <li><a href="attendance.html"><i class="fa-solid fa-clipboard-check"></i>Attendance</a></li>
+      <li><a href="notices.html"><i class="fa-solid fa-bell"></i> Notices</a></li> 
+    <li><a href="login.html"> <i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+</ul>
+</div>
+
+
+
+<div class="main-content">
+  <h1>Marks Overview</h1>
+
+  <table class="table">
+  
+      <tr>
+        <th>Subject</th>
+        <th>Midterm</th>
+        <th>Final</th>
+        <th>Total</th>
+     <th>Percentage</th>
+      </tr>
+
+      <!-- dynamic from PHP -->
+      <tbody id="marks-table-body"></tbody>
+
+  </table>
+</div>
+
+<footer>
+  <p>©️ 2025 EduConnect Student Portal | Designed by Noor Jehan</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

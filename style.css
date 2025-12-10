@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f6f5fa;
+  color: #222;
+  line-height: 1.6;
+ 
+
+}
+
+
+.form-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 
+  Navbar Pages: Home, About, Contact, Login, Register
+    */
+
+/* Navbar */
+nav {
+  background: linear-gradient(90deg, #6D5486, #8C70A8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #dcd0ff;
+}
+
+/* Hero Section (Homepage) */
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(120deg, #ede0ff, #f8f3ff);
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #4e3a68;
+  font-weight: 600;
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #555;
+}
+
+.hero .btn {
+  margin-top: 25px;
+  display: inline-block;
+  background: linear-gradient(135deg, #6D5486, #8C70A8);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #5a4377, #7c629a);
+}
+
+/* Feature Boxes */
+.features {
+  background-color: #f5effa;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.features h2 {
+  color: #4e3a68;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.feature-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature {
+  background: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature i {
+  font-size: 38px;
+  color: #6D5486;
+  margin-bottom: 15px;
+}
+
+/* Contact Page */
+.contact-section {
+  background: #d2d2d5;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 750px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contact-info {
+  flex: 1 1 40%;
+  text-align: left;
+}
+
+.contact-info h2 {
+  color: #6D5486;
+  margin-bottom: 15px;
+}
+
+.contact-info i {
+  color: #6D5486;
+  margin-right: 6px;
+}
+
+form {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+button {
+  background: linear-gradient(135deg, #aa82d3, #8C70A8);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #59406E, #7b5b99);
+  transform: scale(1.02);
+}
+
+/* Login & Register Forms */
+.container {
+
+  background: #2d224d;
+  color: rgb(65, 46, 80);
+  width: 90%;
+  max-width: 350px;
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+
+}
+
+.container2 {
+  background: #2d224d;
+  color: white;
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+
+}
+
+.container h2 {
+  color: #f5f8f9;
+  margin-bottom: 1rem;
+}
+
+.container a {
+  padding: 3px;
+  color: #f2e5e5;
+}
+
+.container2 a {
+  color: #f2e5e5;
+
+}
+
+.container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+}
+
+.container button {
+  width: 100%;
+  padding: 10px;
+  background: #6d5486;
+  color: #f3efef;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background: #5858a2;
+}
+
+/* Sidebar Pages: Dashboard, Attendance, etc.  */
+
+.sidebar {
+  width: 220px ;
+  background: linear-gradient(180deg, #6D5486, #8C70A8);
+  color: white;
+  height: 100vh ;
+  position: fixed;
+  padding-top: 25px;
+  z-index: 10;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 6px 10px;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+/* Main Content Area */
+.main-content {
+  margin-left: 240px;
+  padding: 30px;
+  width: auto;
+
+}
+
+.main-content1 {
+
+
+  padding: 50px 30px 30px 30px;
+
+  background: white;
+
+
+}
+
+.main-content1 h1 {
+  text-align: center;
+
+  padding-bottom: 20px;
+
+  color: #222;
+  font-size: 2.3rem;
+
+}
+
+/* Dashboard Cards */
+.cards {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: #b4afb3;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  color: #6D5486;
+}
+
+/* Tables (Attendance, Marks, Timetable) */
+.timetable {
+  text-align: center;
+  margin: 30px auto;
+  width: 90%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px 10px;
+  text-align: center;
+
+}
+
+th {
+  background: #6D5486;
+  color: white;
+  font-weight: 600;
+}
+
+/* Notices */
+.notice {
+  background: #f5e8f8;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease;
+}
+
+.notice:hover {
+  transform: scale(1.02);
+}
+
+/* Profile Page */
+.profile {
+  background: white;
+  margin: 30px auto;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+
+  max-width: 450px;
+  text-align: center;
+}
+
+
+
+
+/* Profile Picture */
+.profile-image-container {
+  text-align: center;
+  
+
+  margin-bottom: 20px;
+}
+.profile img {
+
+  width: 100px;
+  height: 100px;
+ border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #6D5486;
+  margin-bottom: 10px;
+}
+#change-pic-button.profile.button{
+margin-top: 10px;
+padding: 8px 15px ;
+font-size: 14px;
+}
+
+/* Input Fields */
+
+.profile input {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.profile input:focus {
+  border-color: #6D5486;
+  outline: none;
+  box-shadow: 0 0 5px rgba(109, 84, 134, 0.3);
+}
+
+/* Button */
+.profile button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #6D5486, #8C70A8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.profile button:hover {
+  background: linear-gradient(135deg, #59406E, #7b5b99);
+  transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #6D5486, #8C70A8);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+
+  letter-spacing: 0.3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 25px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    margin: 0 8px;
+
+  }
+
+  .sidebar {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    padding-bottom: 10px;
+    z-index: 100;
+  }
+
+  .sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .main-content,
+  .main-content1 {
+    margin-left: 0 !important;
+    clear: both !important;
+    width: 100% !important;
+    padding: 20px;
+
+  }
+
+  .timetable {
+    width: 95%;
+    padding: 10px;
+
+  }
+
+
+  .table {
+    font-size: 12px;
+
+  }
+
+  th,
+  td {
+
+    padding: 6px 3px
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .container,
+  .container2 {
+    width: 90%;
+    margin: 50px auto;
+    padding: 1.5rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .contact-info,
+  form {
+    flex: 1 1 100%;
+
+  }
+
+  .feature-boxes {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 10px;
+
+  }
+
+  .profile {
+    max-width: 95% !important;
+    margin: 20px auto !important;
+    padding: 20px;
+  }
+
+  footer {
+    padding: 10px !important;
+    margin-top: 0 !important;
+  }
+
+  .main-content+footer,
+  .main-content1+footer {
+    position: relative !important;
+    margin-top: 20px !important;
+
+  }
+}

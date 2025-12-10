@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduConnect | Register</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #fbf4fd;">
+
+<div class="form-wrapper">
+  <div class="container2">
+
+    <h2>Create Account</h2>
+
+    <form onsubmit="registerUser(event)">
+      <input id="reg-name" type="text" placeholder="Full Name" required>
+      <input id="reg-email" type="email" placeholder="Email" required>
+      <input id="reg-pass" type="password" placeholder="Password" required>
+      <p class="note">Password must include 1 uppercase letter, 1 number.</p>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <a href="login.html">Already have an account? Login</a>
+  </div>
+</div>
+
+<footer>
+  <p>©️ 2025 EduConnect Student Portal | Designed by Noor Jehan</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
